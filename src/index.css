@@ -46,7 +46,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .menu-toggle { display: none; }
 
 .hero { position: relative; min-height: 530px; background: #e8e3db; }
-.hero img { width: 100%; height: 530px; object-fit: cover; object-position: center; display: block; }
+.hero img { width: 100%; height: 530px; object-fit: cover; object-position: center 18%; display: block; }
 .hero-copy { position: absolute; inset: 0 auto 0 7vw; display: flex; justify-content: center; flex-direction: column; width: min(430px, 40vw); }
 .hero h1 { font-family: var(--serif); font-size: clamp(38px, 4.1vw, 62px); line-height: 1.18; font-weight: 500; letter-spacing: -.035em; margin: 0 0 20px; }
 .hero p { color: #4c4d4a; font-size: 15px; line-height: 1.65; margin: 0 0 27px; }
@@ -211,7 +211,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
   .logout-action { padding: 7px; }
   .logout-action span { display: none; }
   .hero, .hero img { min-height: 570px; height: 570px; }
-  .hero img { object-position: 64% center; }
+  .hero img { object-position: 64% 22%; }
   .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(245,242,237,.93) 0%, rgba(245,242,237,.72) 43%, rgba(245,242,237,.05) 83%); }
   .hero-copy { z-index: 1; left: 20px; width: 70%; }
   .hero h1 { font-size: 41px; }
