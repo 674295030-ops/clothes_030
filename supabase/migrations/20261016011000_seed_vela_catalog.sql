@@ -1,0 +1,30 @@
+insert into public.dresses (slug, name, designer, price_per_day, occasion, sizes, color_name, color_hex, image_url, available, description)
+values
+('emerald-satin', 'เดรสกำมะหยี่ผ่าข้าง', 'VELA ATELIER', 1800, 'ชุดราตรี', array['S','M','L'], 'Forest', '#214d40', 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=88', true, 'ซิลูเอตเข้ารูปที่โอบรับสรีระอย่างพอดี พร้อมผ้าซาตินที่สะท้อนแสงอย่างนุ่มนวล'),
+('champagne-drape', 'เดรสเดรปสีแชมเปญ', 'LUNA STUDIO', 1600, 'ชุดไปงานแต่ง', array['XS','S','M'], 'Sand', '#d5ab7f', 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=88', true, 'เดรสไหล่เดียวทรง drape ที่เบาสบาย เหมาะกับงานกลางวันและงานแต่งริมทะเล'),
+('black-slit', 'เดรสสายเดี่ยวผ้ากำมะหยี่', 'HAUS OF SILK', 1700, 'ชุดออกงาน', array['S','M','L','XL'], 'Black', '#171717', 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=88', true, 'เดรสสีดำคลาสสิกที่หยิบมาใส่ซ้ำได้ พร้อมดีเทลผ่าข้างที่ทำให้ลุคดูเฉียบขึ้น'),
+('pink-ruffle', 'เดรสระบายชั้นสีชมพู', 'ÉCLAT EDITION', 1800, 'ชุดไปงานแต่ง', array['XS','S','M'], 'Rose', '#d7a7a3', 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=88', true, 'ทรงกระโปรงมีวอลลุ่มพอดีตัวกับระบายชั้นที่ช่วยให้เคลื่อนไหวได้อย่างสวยงาม'),
+('ruby-bow', 'เดรสเกาะอกผ้าทาฟฟ์ต้า', 'VELA ATELIER', 1950, 'ชุดราตรี', array['S','M','L'], 'Ruby', '#7a1f29', 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=88', true, 'เดรสเกาะอกทรง ball gown น้ำหนักเบา มีโบว์ด้านหลังสำหรับปรับลุคให้เด่นขึ้น'),
+('silver-cowl', 'เดรสคอวีผ้าซาติน', 'LUNA STUDIO', 1600, 'ชุดออกงาน', array['XS','S','M','L'], 'Silver', '#d9dde1', 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=88', true, 'เดรสคอวีทรงพริ้วที่ให้ลุคเรียบหรู เหมาะกับดินเนอร์และงานกลางคืน'),
+('midnight-velvet', 'เดรสกำมะหยี่คอเหลี่ยม', 'VELA ATELIER', 2100, 'ชุดราตรี', array['S','M','L'], 'Black', '#171717', 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=900&q=88', true, 'เดรสกำมะหยี่สีดำทรงเข้ารูป ดีไซน์คอเหลี่ยมและช่วงเอวคมชัด เหมาะกับดินเนอร์และงานกลางคืน'),
+('forest-column', 'เดรสคอลัมน์ผ้าซาตินสีเขียว', 'LUNA STUDIO', 1950, 'ชุดราตรี', array['XS','S','M','L'], 'Forest', '#214d40', 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=88', true, 'ทรงยาวพลิ้วที่ช่วยให้ลุคดูสง่า พร้อมผ้าซาตินเงานุ่มสำหรับงานเลี้ยงค่ำคืน'),
+('rose-one-shoulder', 'เดรสไหล่เดียวสีชมพูกุหลาบ', 'CLAT EDITION', 1850, 'ชุดราตรี', array['S','M','L'], 'Rose', '#d7a7a3', 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=88', true, 'เดรสไหล่เดียวโทนโรสที่เติมความหวานแบบมีคลาส เหมาะกับงานค็อกเทลและปาร์ตี้กลางคืน'),
+('ruby-mermaid', 'เดรสหางปลาสีทับทิม', 'HAUS OF SILK', 2300, 'ชุดราตรี', array['S','M','L'], 'Ruby', '#7a1f29', 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=88', true, 'ทรงหางปลาสีทับทิมที่เน้นสัดส่วนอย่างพอดี พร้อมดีเทลเปิดหลังสำหรับลุคพรมแดง'),
+('linen-suit-set', 'เซ็ตสูทลินินสีแซนด์', 'LUNA STUDIO', 1500, 'ชุดออกงาน', array['S','M','L','XL'], 'Sand', '#d5ab7f', 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=88', true, 'สูทลินินทรง relaxed ที่ใส่ได้ทั้งงานกลางวันและงานเปิดตัว ให้ลุคเรียบเท่แบบ effortless'),
+('black-tailored-vest', 'เสื้อกั๊กสูทกับกางเกงเอวสูง', 'VELA ATELIER', 1350, 'ชุดออกงาน', array['XS','S','M','L'], 'Black', '#171717', 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=88', true, 'ลุคเทเลอริ่งสีดำที่จับคู่เสื้อกั๊กเข้ารูปกับกางเกงเอวสูง เหมาะกับอีเวนต์และงานแฟชั่น'),
+('silver-wrap-midi', 'เดรสผูกเอวสีเงินเมทัลลิก', 'HAUS OF SILK', 1650, 'ชุดออกงาน', array['S','M','L'], 'Silver', '#d9dde1', 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=88', true, 'เดรส midi ผิวเมทัลลิกดีไซน์ผูกเอว ช่วยสร้างมิติให้ลุคโดยยังคงความคล่องตัว'),
+('olive-pleated', 'เดรสพลีตแขนพองสีโอลีฟ', 'CLAT EDITION', 1450, 'ชุดออกงาน', array['S','M','L','XL'], 'Forest', '#214d40', 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=88', true, 'เดรสพลีตเนื้อเบาที่มีแขนพองนุ่ม ๆ ให้ลุคสุภาพมีดีเทลสำหรับงานกลางวัน'),
+('champagne-lace', 'เดรสลูกไม้สีแชมเปญ', 'LUNA STUDIO', 1900, 'ชุดไปงานแต่ง', array['XS','S','M'], 'Sand', '#d5ab7f', 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=900&q=88', true, 'เดรสลูกไม้โทนแชมเปญที่สุภาพและถ่ายรูปขึ้น เหมาะกับงานแต่งช่วงกลางวัน'),
+('dusty-rose-midi', 'เดรสคอวีสีดัสตี้โรส', 'CLAT EDITION', 1550, 'ชุดไปงานแต่ง', array['S','M','L'], 'Rose', '#d7a7a3', 'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=88', true, 'เดรส midi ทรงพลิ้วคอวีสีดัสตี้โรส เติมความโรแมนติกแบบสบายตาโดยไม่แย่งซีนเจ้าสาว'),
+('navy-satin-cowl', 'เดรสซาตินคอเควียตต์สีน้ำเงินเข้ม', 'HAUS OF SILK', 1750, 'ชุดไปงานแต่ง', array['S','M','L','XL'], 'Black', '#171717', 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=88', true, 'ซาตินเนื้อเงาทรงคอเควียตต์ที่ช่วยให้ลุคดูสง่า เหมาะกับงานแต่งช่วงเย็น'),
+('ruby-floral-midi', 'เดรสพิมพ์ลายดอกโทนทับทิม', 'VELA ATELIER', 1600, 'ชุดไปงานแต่ง', array['XS','S','M','L'], 'Ruby', '#7a1f29', 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=88', true, 'เดรสพิมพ์ลายดอกสีทับทิมทรง midi ที่เคลื่อนไหวสวย เหมาะกับงานแต่งสวนและงานริมทะเล')
+on conflict (slug) do update set
+  name = excluded.name,
+  designer = excluded.designer,
+  price_per_day = excluded.price_per_day,
+  occasion = excluded.occasion,
+  sizes = excluded.sizes,
+  color_name = excluded.color_name,
+  color_hex = excluded.color_hex,
+  image_url = excluded.image_url,
+  description = excluded.description;
