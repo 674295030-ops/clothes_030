@@ -22,7 +22,7 @@ export const formatBaht = (amount: number) => '฿' + amount.toLocaleString('th-
 
 export const emptyDressForm = (): NewDressForm => ({
   name: '',
-  designer: 'VELA ATELIER',
+  designer: 'THAWINEE ATELIER',
   price: '1600',
   occasion: OCCASIONS[0],
   sizes: ['S', 'M'],

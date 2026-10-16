@@ -48,7 +48,7 @@ type UserProfile = {
 }
 
 const profileFromSession = (session: Session): UserProfile => ({
-  displayName: String(session.user.user_metadata?.full_name ?? session.user.user_metadata?.name ?? 'ลูกค้า Vela'),
+  displayName: String(session.user.user_metadata?.full_name ?? session.user.user_metadata?.name ?? 'ลูกค้า Thawinee'),
   email: session.user.email ?? '',
   avatarUrl: String(session.user.user_metadata?.avatar_url ?? session.user.user_metadata?.picture ?? ''),
   phone: '',
@@ -346,14 +346,14 @@ function App() {
       'รับชุด', 'จัดส่ง', 'สาขา', 'หาดใหญ่', 'สงขลา', 'ขั้นตอนการจอง', 'วิธีจอง',
     ]
     if (!websiteTerms.some((term) => text.includes(term))) {
-      return 'ขออภัยค่ะ ฉันตอบได้เฉพาะข้อมูลที่มีอยู่ในเว็บไซต์ Vela เช่น ชุด ราคา ไซซ์ สี ความพร้อมเช่า สาขา และขั้นตอนการจองค่ะ'
+      return 'ขออภัยค่ะ ฉันตอบได้เฉพาะข้อมูลที่มีอยู่ในเว็บไซต์ Thawinee เช่น ชุด ราคา ไซซ์ สี ความพร้อมเช่า สาขา และขั้นตอนการจองค่ะ'
     }
     const bookingIntent = text.includes('ขั้นตอนการจอง') || text.includes('วิธีจอง') || text.includes('เริ่มจอง') || (text.includes('ขั้นตอน') && text.includes('จอง'))
     if (bookingIntent) {
-      return 'ขั้นตอนการจอง Vela: 1) เลือกชุดที่ชอบและดูรายละเอียดไซซ์ 2) เลือกวันที่ต้องการใช้งาน 3) เลือกจุดรับชุด ได้แก่ สาขาหาดใหญ่ จังหวัดสงขลา หรือจัดส่งถึงบ้าน 4) กดเริ่มจองและเข้าสู่ระบบเพื่อยืนยันคำขอ 5) รับชุดที่ร้านหรือตามช่องทางจัดส่ง และคืนตามวันที่นัดหมายค่ะ'
+      return 'ขั้นตอนการจอง Thawinee: 1) เลือกชุดที่ชอบและดูรายละเอียดไซซ์ 2) เลือกวันที่ต้องการใช้งาน 3) เลือกจุดรับชุด ได้แก่ สาขาหาดใหญ่ จังหวัดสงขลา หรือจัดส่งถึงบ้าน 4) กดเริ่มจองและเข้าสู่ระบบเพื่อยืนยันคำขอ 5) รับชุดที่ร้านหรือตามช่องทางจัดส่ง และคืนตามวันที่นัดหมายค่ะ'
     }
     if (text.includes('สาขา') || text.includes('รับชุด') || text.includes('จัดส่ง')) {
-      return 'Vela มีจุดรับชุดที่สาขาหาดใหญ่ จังหวัดสงขลา และมีบริการจัดส่งถึงบ้านค่ะ'
+      return 'Thawinee มีจุดรับชุดที่สาขาหาดใหญ่ จังหวัดสงขลา และมีบริการจัดส่งถึงบ้านค่ะ'
     }
     const restaurantIntent = ['ร้านอาหาร', 'ดินเนอร์', 'ทานข้าว', 'มื้อค่ำ', 'เดต'].some((keyword) => text.includes(keyword))
     const occasion = text.includes('งานแต่ง')
@@ -366,7 +366,7 @@ function App() {
     const size = SIZES.find((item) => text.includes(item.toLowerCase()))
     const recommendationIntent = restaurantIntent || Boolean(occasion) || Boolean(size) || text.includes('ชุด') || text.includes('เดรส') || text.includes('สี')
     if (!recommendationIntent) {
-      return 'ฉันช่วยแนะนำชุดได้ค่ะ กรุณาระบุโอกาส ไซซ์ สี หรือชื่อชุดจากเว็บไซต์ Vela เพื่อให้แนะนำได้ตรงข้อมูลค่ะ'
+      return 'ฉันช่วยแนะนำชุดได้ค่ะ กรุณาระบุโอกาส ไซซ์ สี หรือชื่อชุดจากเว็บไซต์ Thawinee เพื่อให้แนะนำได้ตรงข้อมูลค่ะ'
     }
     const matches = catalog.filter((dress) => {
       const occasionMatch = restaurantIntent || !occasion || dress.occasion === occasion
@@ -418,7 +418,7 @@ function App() {
     <div className="site-shell">
       <a className="skip-link" href="#catalog">ข้ามไปยังชุดทั้งหมด</a>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Vela Rental หน้าหลัก">VELA</a>
+          <a className="wordmark" href="#top" aria-label="Thawinee หน้าหลัก">THAWINEE</a>
         <nav className={`main-nav ${mobileMenuOpen ? 'is-open' : ''}`} aria-label="เมนูหลัก">
           <a href="#catalog" onClick={() => setMobileMenuOpen(false)}>ชุดราตรี</a>
           <a href="#catalog" onClick={() => setMobileMenuOpen(false)}>ชุดออกงาน</a>
@@ -576,7 +576,7 @@ const bookingStatusLabels: Record<BookingStatus, string> = {
 
 function BookingHistorySection({ bookings, loading, error, onCancel }: { bookings: CustomerBooking[]; loading: boolean; error: string; onCancel: (id: string) => void }) {
   return <section className="account-section" id="my-bookings" aria-labelledby="my-bookings-title">
-    <div className="account-heading"><div><span className="eyebrow">MY VELA</span><h2 id="my-bookings-title">การจองของฉัน</h2></div><span className="account-count">{bookings.length} รายการ</span></div>
+    <div className="account-heading"><div><span className="eyebrow">MY THAWINEE</span><h2 id="my-bookings-title">การจองของฉัน</h2></div><span className="account-count">{bookings.length} รายการ</span></div>
     {error && <p className="inline-error" role="alert">{error}</p>}
     {loading ? <div className="account-empty"><p>กำลังโหลดรายการจอง…</p></div> : bookings.length ? <div className="booking-history-grid">{bookings.map((booking) => <article className="booking-history-card" key={booking.id}><img src={booking.image} alt={booking.dressName} /><div className="booking-history-content"><div className="booking-history-top"><strong>{booking.dressName}</strong><span className={'booking-status status-' + booking.status}>{bookingStatusLabels[booking.status]}</span></div><p>{formatDateThai(booking.pickupDate)} – {formatDateThai(booking.returnDate)}</p><small>{booking.branch} · {formatBaht(booking.price)} / วัน</small>{(booking.status === 'pending' || booking.status === 'confirmed') && <button className="text-action booking-cancel" onClick={() => { if (window.confirm('ต้องการยกเลิกรายการจองนี้หรือไม่')) onCancel(booking.id) }}>ยกเลิกรายการ</button>}</div></article>)}</div> : <div className="account-empty"><p>ยังไม่มีรายการจองในบัญชีนี้</p><a className="button button-outline" href="#catalog">เลือกชุดเพื่อเริ่มจอง</a></div>}
   </section>
@@ -599,7 +599,7 @@ function BookingTray({ dress, pickupDate, returnDate, branch, phone, note, requi
 
 function BookingConfirmation({ dress, bookingId, pickupDate, returnDate, branch, onClose }: { dress: Dress | null; bookingId: string; pickupDate: string; returnDate: string; branch: string; onClose: () => void }) {
   if (!dress) return null
-  return <div className="modal-backdrop" role="presentation"><section className="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="confirmation-title"><button className="modal-close" onClick={onClose} aria-label="ปิด"><X size={19} /></button><div className="success-mark"><Check size={22} /></div><span className="eyebrow">REQUEST RECEIVED</span><h2 id="confirmation-title">ส่งคำขอจองแล้ว</h2><p>{dress.name} · {formatDateThai(pickupDate)} – {formatDateThai(returnDate)}<br />{branch}<br />ทีม Vela จะติดต่อกลับเพื่อยืนยันรายละเอียด</p>{bookingId && <small className="confirmation-id">รหัสการจอง {bookingId.slice(0, 8).toUpperCase()}</small>}<button className="button button-dark" onClick={onClose}>ดูชุดต่อ <ArrowRight size={17} /></button></section></div>
+  return <div className="modal-backdrop" role="presentation"><section className="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="confirmation-title"><button className="modal-close" onClick={onClose} aria-label="ปิด"><X size={19} /></button><div className="success-mark"><Check size={22} /></div><span className="eyebrow">REQUEST RECEIVED</span><h2 id="confirmation-title">ส่งคำขอจองแล้ว</h2><p>{dress.name} · {formatDateThai(pickupDate)} – {formatDateThai(returnDate)}<br />{branch}<br />ทีม Thawinee จะติดต่อกลับเพื่อยืนยันรายละเอียด</p>{bookingId && <small className="confirmation-id">รหัสการจอง {bookingId.slice(0, 8).toUpperCase()}</small>}<button className="button button-dark" onClick={onClose}>ดูชุดต่อ <ArrowRight size={17} /></button></section></div>
 }
 
 function ProfileDialog({ profile, onClose, onSave }: { profile: UserProfile; onClose: () => void; onSave: (displayName: string, phone: string) => Promise<string | null> }) {
@@ -621,18 +621,18 @@ function ProfileDialog({ profile, onClose, onSave }: { profile: UserProfile; onC
 }
 
 function SignInDialog({ onClose, onContinue }: { onClose: () => void; onContinue: () => void }) {
-  return <div className="modal-backdrop" role="presentation"><section className="signin-modal" role="dialog" aria-modal="true" aria-labelledby="signin-title"><button className="modal-close" onClick={onClose} aria-label="ปิด"><X size={19} /></button><CircleUserRound size={25} strokeWidth={1.3} /><h2 id="signin-title">เข้าสู่ระบบ Vela</h2><p>เข้าสู่ระบบเพื่อบันทึกการจอง ตรวจสอบวันว่าง และดูรายการจองของคุณได้ทุกเวลา</p><button className="google-button" onClick={onContinue}><GoogleLogo /> ดำเนินการต่อด้วย Google</button><button className="text-action" onClick={onClose}>ไว้ทีหลัง</button></section></div>
+  return <div className="modal-backdrop" role="presentation"><section className="signin-modal" role="dialog" aria-modal="true" aria-labelledby="signin-title"><button className="modal-close" onClick={onClose} aria-label="ปิด"><X size={19} /></button><CircleUserRound size={25} strokeWidth={1.3} /><h2 id="signin-title">เข้าสู่ระบบ Thawinee</h2><p>เข้าสู่ระบบเพื่อบันทึกการจอง ตรวจสอบวันว่าง และดูรายการจองของคุณได้ทุกเวลา</p><button className="google-button" onClick={onContinue}><GoogleLogo /> ดำเนินการต่อด้วย Google</button><button className="text-action" onClick={onClose}>ไว้ทีหลัง</button></section></div>
 }
 
 function ChatWidget({ open, messages, input, busy, onToggle, onInput, onSend }: { open: boolean; messages: Array<{ role: 'assistant' | 'user'; content: string }>; input: string; busy: boolean; onToggle: () => void; onInput: (value: string) => void; onSend: () => void }) {
   return <div className={`chat-widget ${open ? 'is-open' : ''}`}>
-    {open && <section className="chat-panel" aria-label="ผู้ช่วยเลือกชุด"><div className="chat-header"><div><strong>Vela Stylist</strong><span>ช่วยเลือกชุดให้คุณ</span></div><button className="icon-button" onClick={onToggle} aria-label="ปิดผู้ช่วย"><X size={17} /></button></div><div className="chat-messages">{messages.map((message, index) => <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}{busy && <div className="chat-message assistant">กำลังคิดให้คุณอยู่…</div>}</div><form className="chat-form" onSubmit={(event) => { event.preventDefault(); onSend() }}><input aria-label="พิมพ์คำถาม" value={input} onChange={(event) => onInput(event.target.value)} placeholder="เช่น งานแต่งกลางวัน ไซซ์ M" /><button type="submit" aria-label="ส่งข้อความ" disabled={!input.trim() || busy}><ArrowRight size={16} /></button></form></section>}
+    {open && <section className="chat-panel" aria-label="ผู้ช่วยเลือกชุด"><div className="chat-header"><div><strong>Thawinee Stylist</strong><span>ช่วยเลือกชุดให้คุณ</span></div><button className="icon-button" onClick={onToggle} aria-label="ปิดผู้ช่วย"><X size={17} /></button></div><div className="chat-messages">{messages.map((message, index) => <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}>{message.content}</div>)}{busy && <div className="chat-message assistant">กำลังคิดให้คุณอยู่…</div>}</div><form className="chat-form" onSubmit={(event) => { event.preventDefault(); onSend() }}><input aria-label="พิมพ์คำถาม" value={input} onChange={(event) => onInput(event.target.value)} placeholder="เช่น งานแต่งกลางวัน ไซซ์ M" /><button type="submit" aria-label="ส่งข้อความ" disabled={!input.trim() || busy}><ArrowRight size={16} /></button></form></section>}
     <button className="chat-launcher" onClick={onToggle} aria-label={open ? 'ปิดผู้ช่วยเลือกชุด' : 'เปิดผู้ช่วยเลือกชุด'}><MessageCircle size={17} /> <span>ช่วยเลือกชุด</span></button>
   </div>
 }
 
 function Footer() {
-  return <footer className="site-footer"><div className="footer-brand"><span className="wordmark">VELA</span><p>ชุดที่ทำให้ทุกช่วงเวลาของคุณพิเศษขึ้น</p></div><div className="footer-links"><div><strong>ช่วยเหลือ</strong><a href="#how-it-works">วิธีเช่า</a><a href="#catalog">คู่มือไซซ์</a><a href="#catalog">คำถามที่พบบ่อย</a></div><div><strong>เกี่ยวกับเรา</strong><a href="#top">เรื่องราวของ Vela</a><a href="#catalog">สาขาของเรา</a><a href="#top">ติดต่อเรา</a></div></div><div className="footer-social"><span>ติดตามเรา</span><a href="#top" aria-label="Instagram"><Instagram size={18} /></a><a href="#top" aria-label="Facebook"><MessageCircle size={18} /></a></div><div className="footer-bottom"><span>© 2026 VELA RENTAL</span><span>เงื่อนไขการเช่า · ความเป็นส่วนตัว</span></div></footer>
+  return <footer className="site-footer"><div className="footer-brand"><span className="wordmark">THAWINEE</span><p>ชุดที่ทำให้ทุกช่วงเวลาของคุณพิเศษขึ้น</p></div><div className="footer-links"><div><strong>ช่วยเหลือ</strong><a href="#how-it-works">วิธีเช่า</a><a href="#catalog">คู่มือไซซ์</a><a href="#catalog">คำถามที่พบบ่อย</a></div><div><strong>เกี่ยวกับเรา</strong><a href="#top">เรื่องราวของ Thawinee</a><a href="#catalog">สาขาของเรา</a><a href="#top">ติดต่อเรา</a></div></div><div className="footer-social"><span>ติดตามเรา</span><a href="#top" aria-label="Instagram"><Instagram size={18} /></a><a href="#top" aria-label="Facebook"><MessageCircle size={18} /></a></div><div className="footer-bottom"><span>© 2026 THAWINEE</span><span>เงื่อนไขการเช่า · ความเป็นส่วนตัว</span></div></footer>
 }
 
 export default App

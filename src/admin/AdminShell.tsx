@@ -24,8 +24,8 @@ export function AdminShell({
     <div className="admin-shell">
       <aside className={'admin-sidebar ' + (sidebarOpen ? 'is-open' : '')}>
         <div className="admin-sidebar-top">
-          <a href="/" className="admin-brand" aria-label="กลับหน้า Vela">
-            <span>VELA</span>
+          <a href="/" className="admin-brand" aria-label="กลับหน้า Thawinee">
+            <span>THAWINEE</span>
             <small>THAI DRESS RENTAL</small>
             <em>ADMIN STUDIO</em>
           </a>
@@ -36,7 +36,7 @@ export function AdminShell({
 
         <div className="admin-workspace">
           <span className="admin-avatar">V</span>
-          <div><strong>Vela Rental</strong><small>Hat Yai · Songkhla</small></div>
+          <div><strong>Thawinee</strong><small>Hat Yai · Songkhla</small></div>
           <ChevronDown size={14} />
         </div>
 
@@ -70,7 +70,7 @@ export function AdminShell({
             <Menu size={20} />
           </button>
           <div>
-            <span className="eyebrow">VELA RENTAL / ADMIN</span>
+            <span className="eyebrow">THAWINEE / ADMIN</span>
             <h1>{viewTitles[view]}</h1>
           </div>
           <div className="admin-topbar-actions">
@@ -78,7 +78,7 @@ export function AdminShell({
             <button className="admin-notification" aria-label="การแจ้งเตือน"><Bell size={17} /><i /></button>
             <button className="admin-user-menu" title={session?.user.email || 'Admin preview'}>
               <span className="admin-user-avatar">{session?.user.email?.slice(0, 1).toUpperCase() || 'V'}</span>
-              <span><strong>{session?.user.email?.split('@')[0] || 'ทีม Vela'}</strong><small>ผู้ดูแลระบบ</small></span>
+              <span><strong>{session?.user.email?.split('@')[0] || 'ทีม Thawinee'}</strong><small>ผู้ดูแลระบบ</small></span>
               <ChevronDown size={13} />
             </button>
             <button className="admin-logout-top" onClick={onLogout}><LogOut size={15} /> <span>ออกจากระบบ</span></button>

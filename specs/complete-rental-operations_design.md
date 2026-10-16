@@ -1,4 +1,4 @@
-# Vela Rental — Complete rental operations
+# Thawinee — Complete rental operations
 
 ## Requirements
 
@@ -7,13 +7,13 @@
 - While a customer is authenticated, when they open the account area, the system shall show their bookings and allow cancellation only for pending or confirmed requests.
 - While an admin is authenticated, when they open bookings, the system shall support search, status filtering, CSV export, and status updates.
 - While an admin edits the catalog, the system shall support toggling a dress as available or unavailable without deleting its history.
-- When the chatbot receives a question, it shall use only the Vela catalog and rental information supplied by the server context.
+- When the chatbot receives a question, it shall use only the Thawinee catalog and rental information supplied by the server context.
 
 ## Architecture
 
 ### Frontend
 
-- Keep the existing Vela editorial storefront and componentized Admin surface.
+- Keep the existing Thawinee editorial storefront and componentized Admin surface.
 - Add a live catalog loader with mock fallback.
 - Replace preset booking strings with ISO date inputs, availability state, phone validation, and a real submit state.
 - Add customer bookings section and rental-information section.

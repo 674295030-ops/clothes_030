@@ -1,4 +1,4 @@
-# Vela admin dashboard
+# Thawinee admin dashboard
 
 ## Scope
 

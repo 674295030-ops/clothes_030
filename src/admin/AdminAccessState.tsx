@@ -15,7 +15,7 @@ export function AdminAccessState({ access, onLogin }: { access: AccessState; onL
     <div className="admin-gate">
       <div className="admin-gate-card">
         <span className="admin-gate-mark"><ShieldCheck size={25} /></span>
-        <span className="eyebrow">VELA ADMIN STUDIO</span>
+        <span className="eyebrow">THAWINEE ADMIN STUDIO</span>
         <h1>{copy.title}</h1>
         <p>{copy.description}</p>
         {access === 'signed-out' && <button className="button button-dark admin-google-button" onClick={onLogin}><GoogleLogo /> เข้าสู่ระบบด้วย Google</button>}

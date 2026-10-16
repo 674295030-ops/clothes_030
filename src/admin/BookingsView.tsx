@@ -34,7 +34,7 @@ export function BookingsView({
     const url = URL.createObjectURL(new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' }))
     const anchor = document.createElement('a')
     anchor.href = url
-    anchor.download = 'vela-bookings.csv'
+    anchor.download = 'thawinee-bookings.csv'
     anchor.click()
     URL.revokeObjectURL(url)
   }

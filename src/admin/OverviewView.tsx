@@ -33,7 +33,7 @@ export function OverviewView({
       <section className="admin-welcome">
         <div>
           <span className="eyebrow">{todayLabel}</span>
-          <h2>สวัสดีค่ะ, ทีม Vela <span>✦</span></h2>
+          <h2>สวัสดีค่ะ, ทีม Thawinee <span>✦</span></h2>
           <p>สรุปภาพรวมร้านเช่าชุดของคุณในวันนี้</p>
         </div>
         <div className="admin-welcome-actions"><button className="admin-secondary-button" onClick={onOpenBookings}>ดูรายการจอง <ArrowRight size={15} /></button><button className="admin-primary-button" onClick={onAddDress}><Plus size={15} /> เพิ่มชุดใหม่</button></div>

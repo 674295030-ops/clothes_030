@@ -6,7 +6,7 @@ export const dresses: Dress[] = [
   {
     id: 'emerald-satin',
     name: 'เดรสกำมะหยี่ผ่าข้าง',
-    designer: 'VELA ATELIER',
+    designer: 'THAWINEE ATELIER',
     price: 1800,
     occasion: 'ชุดราตรี',
     sizes: ['S', 'M', 'L'],
@@ -58,7 +58,7 @@ export const dresses: Dress[] = [
   {
     id: 'ruby-bow',
     name: 'เดรสเกาะอกผ้าทาฟฟ์ต้า',
-    designer: 'VELA ATELIER',
+    designer: 'THAWINEE ATELIER',
     price: 1950,
     occasion: 'ชุดราตรี',
     sizes: ['S', 'M', 'L'],
@@ -84,7 +84,7 @@ export const dresses: Dress[] = [
   {
     id: 'midnight-velvet',
     name: 'เดรสกำมะหยี่คอเหลี่ยม',
-    designer: 'VELA ATELIER',
+    designer: 'THAWINEE ATELIER',
     price: 2100,
     occasion: 'ชุดราตรี',
     sizes: ['S', 'M', 'L'],
@@ -149,7 +149,7 @@ export const dresses: Dress[] = [
   {
     id: 'black-tailored-vest',
     name: 'เสื้อกั๊กสูทกับกางเกงเอวสูง',
-    designer: 'VELA ATELIER',
+    designer: 'THAWINEE ATELIER',
     price: 1350,
     occasion: 'ชุดออกงาน',
     sizes: ['XS', 'S', 'M', 'L'],
@@ -227,7 +227,7 @@ export const dresses: Dress[] = [
   {
     id: 'ruby-floral-midi',
     name: 'เดรสพิมพ์ลายดอกโทนทับทิม',
-    designer: 'VELA ATELIER',
+    designer: 'THAWINEE ATELIER',
     price: 1600,
     occasion: 'ชุดไปงานแต่ง',
     sizes: ['XS', 'S', 'M', 'L'],

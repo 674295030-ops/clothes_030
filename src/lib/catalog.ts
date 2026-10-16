@@ -19,7 +19,7 @@ export type SupabaseDressRow = {
 export const mapSupabaseDress = (row: SupabaseDressRow): Dress => ({
   id: String(row.id),
   name: String(row.name ?? 'ชุดใหม่'),
-  designer: String(row.designer ?? 'VELA ATELIER'),
+  designer: String(row.designer ?? 'THAWINEE ATELIER'),
   price: Number(row.price_per_day ?? 0),
   occasion: OCCASIONS.includes(row.occasion as (typeof OCCASIONS)[number]) ? row.occasion as Dress['occasion'] : OCCASIONS[0],
   sizes: (row.sizes ?? []).filter((size): size is (typeof SIZES)[number] => SIZES.includes(size as (typeof SIZES)[number])),

@@ -67,7 +67,7 @@ function AdminPage() {
         const price = Number(dress?.price_per_day ?? 0)
         return {
           id: String(row.id),
-          customer: customer?.display_name || customer?.email || 'ลูกค้า Vela',
+          customer: customer?.display_name || customer?.email || 'ลูกค้า Thawinee',
           email: customer?.email || '',
           dress: dress?.name || 'ชุดจากคลัง',
           image: dress?.image_url || dresses[0].image,
@@ -186,7 +186,7 @@ function AdminPage() {
     if (!isPreview && access === 'allowed' && supabase) {
       const query = editingDress
         ? supabase.from('dresses').update(dressPayload).eq('id', editingDress.id)
-        : supabase.from('dresses').insert({ slug: 'vela-' + Date.now(), ...dressPayload })
+        : supabase.from('dresses').insert({ slug: 'thawinee-' + Date.now(), ...dressPayload })
       const { data, error } = await query
         .select('id, name, designer, price_per_day, occasion, sizes, color_name, color_hex, image_url, available, description')
         .single()

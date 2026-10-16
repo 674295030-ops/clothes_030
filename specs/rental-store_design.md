@@ -1,4 +1,4 @@
-# Vela Rental — Technical design
+# Thawinee — Technical design
 
 ## Product goal
 
